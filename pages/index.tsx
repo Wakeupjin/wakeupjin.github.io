@@ -6,32 +6,32 @@ const HomePage = () => {
   const recentPosts = [
     {
       id: 1,
-      title: 'Next.js와 Notion으로 블로그 만들기',
-      excerpt: 'Notion API를 활용해서 개인 블로그를 만드는 과정을 공유합니다.',
-      date: '2025-10-12',
-      readTime: '5분',
-      category: 'Development'
+      title: '초등학생 영어교육, 놀이로 시작하는 모국어 습득법',
+      excerpt: '미믹 프랜차이즈에서 개발한 놀이형 영어 교육의 핵심 원리를 공유합니다.',
+      date: '2025-01-15',
+      readTime: '8분',
+      category: '영어교육'
     },
     {
       id: 2,
-      title: 'TypeScript 타입 가드 완벽 정리',
-      excerpt: 'TypeScript에서 타입을 안전하게 체크하는 방법들을 알아봅시다.',
-      date: '2025-10-10',
-      readTime: '7분',
-      category: 'TypeScript'
+      title: '퀵계좌이체 제품 성장, 데이터 기반 의사결정의 힘',
+      excerpt: '토스페이먼츠에서 퀵계좌이체 제품을 성장시킨 GTM 전략과 인사이트를 공유합니다.',
+      date: '2025-01-12',
+      readTime: '12분',
+      category: '핀테크'
     },
     {
       id: 3,
-      title: 'React 18의 새로운 기능들',
-      excerpt: 'Concurrent Features, Suspense, Automatic Batching 등을 살펴봅시다.',
-      date: '2025-10-08',
+      title: '프랜차이즈 운영, 교육과 비즈니스의 균형점',
+      excerpt: '미믹 프랜차이즈 운영 경험을 통해 배운 교육 사업의 성공 요소들을 정리합니다.',
+      date: '2025-01-10',
       readTime: '10분',
-      category: 'React'
+      category: '프랜차이즈'
     }
   ];
 
   const skills = [
-    'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Git'
+    '영어교육', '프랜차이즈', '제품성장', 'GTM', '데이터분석', '교육기획', '사업개발'
   ];
 
   return (
@@ -42,12 +42,12 @@ const HomePage = () => {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               안녕하세요! 👋<br />
-              <span className="text-gradient">개발자 WakeupJin</span>입니다
+              <span className="text-gradient">이강진</span>입니다
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              프론트엔드 개발과 새로운 기술을 탐구하며, 
-              배운 것들을 기록하고 공유하는 공간입니다.
-              함께 성장하는 개발자가 되고 싶습니다.
+              미믹 영어교육 프랜차이즈를 창업하며, 
+              토스페이먼츠에서 퀵계좌이체 제품 성장을 담당하고 있습니다.
+              교육과 핀테크의 융합을 통해 새로운 가치를 만들어가고 있습니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/blog" className="btn-primary">
