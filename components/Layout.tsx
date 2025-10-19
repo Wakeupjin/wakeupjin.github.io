@@ -11,8 +11,8 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
-  title = '이강진 - 교육과 핀테크 블로그',
-  description = '안녕하세요! 미믹 영어교육 프랜차이즈 창업자이자 토스페이먼츠 GTM 이강진의 블로그입니다.'
+  title = '이강진 - 영어 교육과 직무 경험 및 주식 투자 관련 블로그',
+  description = '안녕하세요! 미믹이라는 영어교육 프랜차이즈를 준비하고 있으며 토스페이먼츠 GTM 직무로 활동 중인 이강진의 블로그입니다.'
 }) => {
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -61,7 +61,7 @@ const Layout: React.FC<LayoutProps> = ({
                   <img 
                     src="/chameleon-icon.png" 
                     alt="카멜레온" 
-                    className="w-full h-full object-contain scale-120"
+                    className="w-full h-full object-contain scale-1"
                   />
                 </div>
                 <span className="font-bold text-xl text-gray-900">이강진</span>

@@ -33,7 +33,7 @@ const HomePage = () => {
   ];
 
   const skills = [
-    '영어 교육', '주식 투자', '영어 공용화', 'AC/VC 펀딩', '교육 프랜차이즈'
+    '영어 교육', '영어 공용화', '주식 투자', 'AC/VC 펀딩', '프랜차이즈'
   ];
 
   return (
@@ -42,15 +42,15 @@ const HomePage = () => {
       <section className="py-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               안녕하세요! 👋<br /> 
               <span className="text-gradient">이강진</span>이라고 합니다!
             </h1>
-            <div style={{ marginTop: '24px' }} className="text-xl text-gray-600 mb-8 leading-relaxed">
-              <p>토스페이먼츠에서 '퀵계좌이체'라는 제품 성장을 위해 다양한 전략을 시도하고 있으며</p>
-              <p style={{ marginTop: '6px' }}>'미믹'이라는 놀이형 영어 교육 프랜차이즈를 준비중입니다.</p>
-              <p style={{ marginTop: '6px' }}>350만 부 베스트 셀러 '영어공부 절대로 하지마라'의 저자인 정찬용 박사와 함께
-                <br />대한민국 영어교육을 바꾸고 영어 공용화를 통하여 아이들의 삶을 다채롭게 만들고 싶습니다.</p>
+            <div style={{ marginTop: '24px' }} className="text-m text-gray-600 mb-8 leading-relaxed">
+            <p>토스페이먼츠에서 '퀵계좌이체'라는 제품 성장을 위해 다양한 전략을 시도하며 배우고 있습니다.
+              '미믹'이라는 놀이형 영어 교육 프랜차이즈를 준비중입니다.</p>
+               <p style={{ marginTop: '5px' }}>'<a href="https://namu.wiki/w/%EC%98%81%EC%96%B4%EA%B3%B5%EB%B6%80%20%EC%A0%88%EB%8C%80%EB%A1%9C%20%ED%95%98%EC%A7%80%EB%A7%88%EB%9D%BC!" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 underline">영절하</a>'와 '토스잉글리쉬'의 주인공인 정찬용 박사와 함께
+               대한민국 영어교육을 바꾸고 영어 공용화를 통하여 아이들의 삶을 다채롭게 만들고 싶습니다.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/blog" className="btn-primary">
