@@ -57,8 +57,12 @@ const Layout: React.FC<LayoutProps> = ({
             <div className="flex justify-between items-center h-16">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">이</span>
+                <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center p-1">
+                  <img 
+                    src="/chameleon-icon.png" 
+                    alt="카멜레온" 
+                    className="w-full h-full object-contain scale-120"
+                  />
                 </div>
                 <span className="font-bold text-xl text-gray-900">이강진</span>
               </Link>

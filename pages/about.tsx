@@ -6,14 +6,14 @@ const AboutPage = () => {
   const experiences = [
     {
       period: '2024 - 현재',
-      title: 'GTM (Growth Team Manager)',
+      title: 'GTM (Go-To-Market)',
       company: '토스페이먼츠',
       description: '퀵계좌이체 제품 성장 담당, 데이터 기반 제품 전략 수립 및 실행',
       skills: ['제품성장', 'GTM', '데이터분석', '사업개발']
     },
     {
-      period: '2023 - 현재',
-      title: '창업자 & 대표',
+      period: '2022 - 현재',
+      title: '미',
       company: '미믹 (영어교육 프랜차이즈)',
       description: '모국어 습득 원리를 활용한 놀이형 영어교육 프랜차이즈 창업 및 운영',
       skills: ['영어교육', '프랜차이즈', '교육기획', '사업운영']
