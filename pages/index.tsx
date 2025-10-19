@@ -49,7 +49,7 @@ const HomePage = () => {
             <div className="text-m text-gray-600 mb-5 leading-relaxed">
             <p>토스페이먼츠에서 '퀵계좌이체'라는 제품 성장을 위해 다양한 전략을 시도하며 배우고 있고,
               '미믹'이라는 놀이형 영어 교육 프랜차이즈를 준비중입니다.</p>
-               <p style={{ marginTop: '5px' }}>350만 부 베스트 셀러! '<a href="https://namu.wiki/w/%EC%98%81%EC%96%B4%EA%B3%B5%EB%B6%80%20%EC%A0%88%EB%8C%80%EB%A1%9C%20%ED%95%98%EC%A7%80%EB%A7%88%EB%9D%BC!" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 underline">영절하</a>'와 '<a href="https://www.veritas-a.com/news/articleView.html?idxno=4717" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 underline">토스 잉글리시</a>'의 주인공인 정찬용 박사와 함께
+               <p style={{ marginTop: '5px' }}>350만 부 밀리언셀러! '<a href="https://namu.wiki/w/%EC%98%81%EC%96%B4%EA%B3%B5%EB%B6%80%20%EC%A0%88%EB%8C%80%EB%A1%9C%20%ED%95%98%EC%A7%80%EB%A7%88%EB%9D%BC!" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 underline">영절하</a>'와 '<a href="https://www.veritas-a.com/news/articleView.html?idxno=4717" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 underline">토스 잉글리시</a>'의 주인공인 정찬용 박사와 함께
                대한민국의 영어 교육을 바꾸고 영어 공용화를 이뤄내 아이들의 삶을 다채롭게 만들고 싶습니다.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
