@@ -45,16 +45,16 @@ const HomePage = () => {
               <span className="text-gradient">이강진</span>입니다
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              미믹 영어교육 프랜차이즈를 창업하며, 
-              토스페이먼츠에서 퀵계좌이체 제품 성장을 담당하고 있습니다.
-              교육과 핀테크의 융합을 통해 새로운 가치를 만들어가고 있습니다.
+              
+              토스페이먼츠에서 퀵계좌이체라는 제품 성장을 위해 다양한 전략을 시도하고 있으며 <br />
+              개인적으로는 미믹이라는 놀이형 영어 교육 프랜차이즈를 준비중입니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/blog" className="btn-primary">
                 블로그 글 보기
               </Link>
               <Link href="/projects" className="btn-secondary">
-                프로젝트 둘러보기
+                미믹 서비스 보기
               </Link>
             </div>
           </div>
@@ -64,7 +64,7 @@ const HomePage = () => {
       {/* Skills Section */}
       <section className="py-16 bg-white">
         <div className="container-custom">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">기술 스택</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">관심 분야</h2>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill) => (
               <span
@@ -130,8 +130,7 @@ const HomePage = () => {
         <div className="container-custom text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">함께 이야기해요</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            개발, 협업, 또는 그냥 안녕하다는 인사라도 좋습니다. 
-            언제든 연락주세요!
+            영어교육과 주식투자에 대한 이야기나 문의가 있다면 언제든 연락주세요!
           </p>
           <Link href="/contact" className="btn-primary">
             연락하기

@@ -192,59 +192,93 @@ export const getNotionService = (): NotionService => {
   return notionService;
 };
 
-// 개발 환경에서 사용할 더미 데이터
+// 개발 환경에서 사용할 더미 데이터 (영어교육, 주식투자, GTM 관련)
 export const getDummyBlogPosts = (): BlogPost[] => [
   {
     id: '1',
-    title: 'Next.js와 Notion으로 블로그 만들기',
-    excerpt: 'Notion API를 활용해서 개인 블로그를 만드는 과정을 공유합니다.',
-    content: '# Next.js와 Notion으로 블로그 만들기\n\n이번 포스트에서는...',
-    date: '2025-10-12',
-    tags: ['Next.js', 'Notion', 'Blog'],
+    title: '초등학생 영어교육, 놀이로 시작하는 모국어 습득법',
+    excerpt: '미믹 프랜차이즈에서 실제로 사용하는 놀이형 영어 교육의 핵심 원리를 공유합니다.',
+    content: '# 초등학생 영어교육, 놀이로 시작하는 모국어 습득법\n\n아이들이 자연스럽게 언어를 습득하는 과정을 연구하며...',
+    date: '2025-01-15',
+    tags: ['영어교육', '모국어습득', '놀이교육'],
     published: true,
-    readTime: '5분',
-    category: 'Development'
+    readTime: '8분',
+    category: '영어교육'
   },
   {
     id: '2',
-    title: 'TypeScript 타입 가드 완벽 정리',
-    excerpt: 'TypeScript에서 타입을 안전하게 체크하는 방법들을 알아봅시다.',
-    content: '# TypeScript 타입 가드\n\n타입 가드는...',
-    date: '2025-10-10',
-    tags: ['TypeScript', 'Type Safety'],
+    title: '퀵계좌이체 제품 성장, 데이터 기반 의사결정의 힘',
+    excerpt: '토스페이먼츠에서 퀵계좌이체 제품을 성장시킨 GTM 전략과 인사이트를 공유합니다.',
+    content: '# 퀵계좌이체 제품 성장, 데이터 기반 의사결정의 힘\n\n제품 성장을 위한 데이터 분석과 사용자 인사이트...',
+    date: '2025-01-12',
+    tags: ['제품성장', 'GTM', '데이터분석'],
     published: true,
-    readTime: '7분',
-    category: 'TypeScript'
+    readTime: '12분',
+    category: '핀테크'
   },
   {
     id: '3',
-    title: 'React 18의 새로운 기능들',
-    excerpt: 'Concurrent Features, Suspense, Automatic Batching 등을 살펴봅시다.',
-    content: '# React 18 새로운 기능들\n\nReact 18에서는...',
-    date: '2025-10-08',
-    tags: ['React', 'React 18'],
+    title: '프랜차이즈 운영, 교육과 비즈니스의 균형점',
+    excerpt: '미믹 프랜차이즈 운영 경험을 통해 배운 교육 사업의 성공 요소들을 정리합니다.',
+    content: '# 프랜차이즈 운영, 교육과 비즈니스의 균형점\n\n교육 사업의 지속가능성을 위한 운영 노하우...',
+    date: '2025-01-10',
+    tags: ['프랜차이즈', '교육사업', '운영노하우'],
     published: true,
     readTime: '10분',
-    category: 'React'
+    category: '프랜차이즈'
+  },
+  {
+    id: '4',
+    title: '6-12세 아이들을 위한 영어 놀이 활동 10가지',
+    excerpt: '미믹에서 실제로 사용하는 효과적인 영어 놀이 활동들을 소개합니다.',
+    content: '# 6-12세 아이들을 위한 영어 놀이 활동 10가지\n\n연령대별 맞춤 놀이 활동...',
+    date: '2025-01-08',
+    tags: ['영어놀이', '초등교육', '활동자료'],
+    published: true,
+    readTime: '6분',
+    category: '영어교육'
+  },
+  {
+    id: '5',
+    title: '결제 서비스 UX, 사용자 여정 최적화하기',
+    excerpt: '토스페이먼츠에서 배운 결제 서비스 UX 개선 경험을 공유합니다.',
+    content: '# 결제 서비스 UX, 사용자 여정 최적화하기\n\n결제 과정에서의 사용자 경험 개선...',
+    date: '2025-01-05',
+    tags: ['UX', '결제서비스', '사용자경험'],
+    published: true,
+    readTime: '9분',
+    category: '핀테크'
   }
 ];
 
 export const getDummyProjects = (): Project[] => [
   {
     id: '1',
-    name: 'Personal Blog',
-    description: 'Next.js와 Notion API를 활용한 개인 블로그',
-    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Notion API'],
-    githubUrl: 'https://github.com/wakeupjin/blog',
-    demoUrl: 'https://wakeupjin.github.io',
+    name: '미믹 영어교육 프로그램',
+    description: '모국어 습득 원리를 활용한 놀이형 영어교육 커리큘럼',
+    techStack: ['영어교육', '모국어습득', '놀이교육', '커리큘럼'],
+    demoUrl: 'https://mimic-english.com',
     featured: true
   },
   {
     id: '2',
-    name: 'Todo App',
-    description: '할 일 관리를 위한 간단한 웹 애플리케이션',
-    techStack: ['React', 'JavaScript', 'CSS'],
-    githubUrl: 'https://github.com/wakeupjin/todo-app',
+    name: '퀵계좌이체 제품 성장',
+    description: '토스페이먼츠에서 퀵계좌이체 제품의 사용자 성장 및 전환율 개선',
+    techStack: ['제품성장', 'GTM', '데이터분석', '사용자경험'],
+    featured: true
+  },
+  {
+    id: '3',
+    name: '미믹 프랜차이즈 운영 시스템',
+    description: '교육과 비즈니스의 균형을 맞춘 프랜차이즈 운영 솔루션',
+    techStack: ['프랜차이즈', '운영시스템', '교육관리', '사업개발'],
+    featured: false
+  },
+  {
+    id: '4',
+    name: '결제 서비스 UX 개선',
+    description: '사용자 여정 최적화를 통한 결제 전환율 향상',
+    techStack: ['UX/UI', '결제서비스', '사용자분석', 'A/B테스트'],
     featured: false
   }
 ];

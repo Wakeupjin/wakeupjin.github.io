@@ -10,6 +10,7 @@ const ContactPage = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -34,36 +35,60 @@ const ContactPage = () => {
     {
       icon: '📧',
       title: 'Email',
-      description: 'wakeupjin4436@gmail.com',
-      action: 'mailto:wakeupjin4436@gmail.com'
+      description: 'wakeupjin@gmail.com',
+      action: 'mailto:wakeupjin@gmail.com',
+      isModal: false
+    },
+    {
+      icon: '🏢',
+      title: '모국어 습득 원리',
+      description: '영어교육 방법론과 프랜차이즈 운영',
+      action: '#',
+      isModal: true
     },
     {
       icon: '💼',
-      title: 'GitHub',
-      description: '@wakeupjin',
-      action: 'https://github.com/wakeupjin'
-    },
-    {
-      icon: '💬',
       title: 'LinkedIn',
       description: '프로필 보기',
-      action: 'https://linkedin.com/in/wakeupjin'
+      action: 'https://www.linkedin.com/in/kangjin-lee-241417258',
+      isModal: false
     }
   ];
 
   return (
     <Layout 
-      title="Contact - WakeupJin"
-      description="연락하고 싶으시면 언제든 메시지를 보내주세요!"
+      title="Contact - 이강진"
+      description="영어교육과 관련된 문의는 언제든 연락주세요!"
     >
+      {/* 준비중 모달 */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-8 max-w-md mx-4 text-center">
+            <div className="text-6xl mb-4">🚧</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">준비중입니다</h2>
+            <p className="text-gray-600 mb-6">
+              모국어 습득 원리 관련 페이지를 준비중으로<br />
+              영어교육 방법론과 프랜차이즈 운영 계획을 공유할 예정입니다.
+            </p>
+            <button 
+              onClick={() => setShowModal(false)}
+              className="btn-primary"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Header Section */}
       <section className="py-16 bg-gradient-to-br from-primary-50 to-white">
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contact</h1>
             <p className="text-xl text-gray-600">
-              협업 제안, 기술적인 질문, 또는 그냥 안녕하다는 인사라도 좋습니다. 
-              언제든 연락주세요!
+              영어교육, 주식투자 관련 문의나 협업 제안은 언제든 연락주세요!<br />
+              <br />
+              특히 영어교육 방법론이나 프랜차이즈 운영에 대한 상담이 필요하시면 언제든 연락주세요.
             </p>
           </div>
         </div>
@@ -103,7 +128,7 @@ const ContactPage = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="홍길동"
+                        placeholder="미믹"
                       />
                     </div>
                     
@@ -119,7 +144,7 @@ const ContactPage = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="hong@example.com"
+                        placeholder="mimic@mimic.ai"
                       />
                     </div>
                   </div>
@@ -137,9 +162,8 @@ const ContactPage = () => {
                       onChange={handleChange}
                     >
                       <option value="">주제를 선택해주세요</option>
-                      <option value="collaboration">협업 제안</option>
-                      <option value="technical">기술적 질문</option>
-                      <option value="feedback">피드백</option>
+                      <option value="education">영어교육 문의</option>
+                      <option value="franchise">프랜차이즈 문의</option>
                       <option value="other">기타</option>
                     </select>
                   </div>
@@ -181,29 +205,57 @@ const ContactPage = () => {
               
               <div className="space-y-6">
                 {contactMethods.map((method, index) => (
-                  <a
+                  <div
                     key={index}
-                    href={method.action}
-                    target={method.action.startsWith('http') ? '_blank' : '_self'}
-                    rel={method.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                    className="flex items-center p-6 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors group"
+                    onClick={() => method.isModal ? setShowModal(true) : null}
+                    className={`flex items-center p-6 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors group ${
+                      method.isModal ? 'cursor-pointer' : ''
+                    }`}
                   >
-                    <div className="text-3xl mr-4">{method.icon}</div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 group-hover:text-primary-600">
-                        {method.title}
-                      </h3>
-                      <p className="text-gray-600">{method.description}</p>
-                    </div>
-                    <svg 
-                      className="w-5 h-5 ml-auto text-gray-400 group-hover:text-primary-600" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
+                    {!method.isModal && (
+                      <a
+                        href={method.action}
+                        target={method.action.startsWith('http') ? '_blank' : '_self'}
+                        rel={method.action.startsWith('http') ? 'noopener noreferrer' : ''}
+                        className="flex items-center w-full"
+                      >
+                        <div className="text-3xl mr-4">{method.icon}</div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 group-hover:text-primary-600">
+                            {method.title}
+                          </h3>
+                          <p className="text-gray-600">{method.description}</p>
+                        </div>
+                        <svg 
+                          className="w-5 h-5 ml-auto text-gray-400 group-hover:text-primary-600" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    )}
+                    {method.isModal && (
+                      <>
+                        <div className="text-3xl mr-4">{method.icon}</div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 group-hover:text-primary-600">
+                            {method.title}
+                          </h3>
+                          <p className="text-gray-600">{method.description}</p>
+                        </div>
+                        <svg 
+                          className="w-5 h-5 ml-auto text-gray-400 group-hover:text-primary-600" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </>
+                    )}
+                  </div>
                 ))}
               </div>
 
@@ -221,15 +273,15 @@ const ContactPage = () => {
                 <h3 className="font-semibold text-gray-900 mb-4">💡 자주 묻는 질문</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-medium text-gray-900 text-sm">협업 가능한 프로젝트 유형은?</h4>
+                    <h4 className="font-medium text-gray-900 text-sm">어떤 분야 협업이 가능한가요?</h4>
                     <p className="text-gray-600 text-sm mt-1">
-                      웹 개발, 특히 React/Next.js 기반 프로젝트에 관심이 많습니다.
+                      영어교육, 프랜차이즈 운영, 주식 투자 관련 프로젝트에 관심이 많습니다.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 text-sm">기술 문의도 가능한가요?</h4>
+                    <h4 className="font-medium text-gray-900 text-sm">교육 상담도 가능한가요?</h4>
                     <p className="text-gray-600 text-sm mt-1">
-                      네! 개발 관련 질문이나 조언이 필요하시면 언제든 연락주세요.
+                      네! 영어교육 방법론이나 프랜차이즈에 대한 상담이 필요하시면 언제든 연락주세요.
                     </p>
                   </div>
                 </div>

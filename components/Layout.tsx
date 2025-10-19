@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -11,10 +11,11 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
-  title = 'WakeupJin - 개발자 블로그',
-  description = '안녕하세요! 개발과 일상을 기록하는 WakeupJin의 블로그입니다.'
+  title = '이강진 - 교육과 핀테크 블로그',
+  description = '안녕하세요! 미믹 영어교육 프랜차이즈 창업자이자 토스페이먼츠 GTM 이강진의 블로그입니다.'
 }) => {
   const router = useRouter();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -57,9 +58,9 @@ const Layout: React.FC<LayoutProps> = ({
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">W</span>
+                  <span className="text-white font-bold text-sm">이</span>
                 </div>
-                <span className="font-bold text-xl text-gray-900">WakeupJin</span>
+                <span className="font-bold text-xl text-gray-900">이강진</span>
               </Link>
 
               {/* Desktop Navigation */}
@@ -79,30 +80,40 @@ const Layout: React.FC<LayoutProps> = ({
               <div className="md:hidden">
                 <button
                   type="button"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900"
-                  aria-label="메뉴 열기"
+                  aria-label={isMobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
                 >
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
+                  {isMobileMenuOpen ? (
+                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  ) : (
+                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  )}
                 </button>
               </div>
             </div>
 
             {/* Mobile Navigation */}
-            <div className="md:hidden pb-4">
-              <div className="flex flex-col space-y-1">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`nav-link ${isActive(item.href) ? 'nav-link-active' : ''}`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+            {isMobileMenuOpen && (
+              <div className="md:hidden pb-4">
+                <div className="flex flex-col space-y-1">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`nav-link ${isActive(item.href) ? 'nav-link-active' : ''}`}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </nav>
         </header>
 
@@ -117,9 +128,9 @@ const Layout: React.FC<LayoutProps> = ({
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center space-x-2 mb-4 md:mb-0">
                 <div className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-700 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">W</span>
+                  <span className="text-white font-bold text-xs">이</span>
                 </div>
-                <span className="text-gray-600">WakeupJin Blog</span>
+                <span className="text-gray-600">이강진 Blog</span>
               </div>
               
               <div className="flex items-center space-x-6">
@@ -131,7 +142,7 @@ const Layout: React.FC<LayoutProps> = ({
                 </Link>
                 
                 <div className="text-sm text-gray-500">
-                  © 2025 WakeupJin. All rights reserved.
+                  © 2025 이강진. All rights reserved.
                 </div>
               </div>
             </div>
