@@ -72,7 +72,7 @@ const HomePage = () => {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium"
+                className="px-2 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium"
               >
                 {skill}
               </span>
