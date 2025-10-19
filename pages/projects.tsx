@@ -21,7 +21,7 @@ const ProjectsPage = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">준비중입니다</h2>
             <p className="text-gray-600 mb-6">
               프로젝트 포트폴리오를 준비하고 있습니다.<br />
-              미믹이라는 서비스와 토스페이먼츠 프로젝트를 곧 공유할 예정입니다.
+              미믹이라는 서비스의 탄생 배경과 정찬용과 이강진의 이야기를 공유합니다.
             </p>
             <button 
               onClick={() => setShowModal(false)}
