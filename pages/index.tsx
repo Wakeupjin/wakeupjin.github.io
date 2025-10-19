@@ -37,7 +37,7 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-5 bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -46,8 +46,10 @@ const HomePage = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               
-              토스페이먼츠에서 퀵계좌이체라는 제품 성장을 위해 다양한 전략을 시도하고 있으며 <br />
+              토스페이먼츠에서 퀵계좌이체라는 제품 성장을 위해 다양한 전략을 시도하고 있으며<br />
               개인적으로는 미믹이라는 놀이형 영어 교육 프랜차이즈를 준비중입니다.
+              <br />
+              정찬용 박사와 함께 대한민국 영어교육을 바꾸고 영어 공용화를 통하여 아이들의 삶을 다채롭게 만들고 싶습니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/blog" className="btn-primary">

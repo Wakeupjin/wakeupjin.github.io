@@ -3,10 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  schedule:
-    # 매일 오전 9시에 자동 업데이트 (KST 기준)
-    - cron: '0 0 * * *'
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -33,17 +29,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
-
       - name: Build
         run: npm run build
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_BLOG_DATABASE_ID: ${{ secrets.NOTION_BLOG_DATABASE_ID }}
-          NOTION_PROJECTS_DATABASE_ID: ${{ secrets.NOTION_PROJECTS_DATABASE_ID }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

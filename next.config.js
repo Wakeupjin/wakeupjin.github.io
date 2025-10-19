@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/wakeupjin.github.io' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/wakeupjin.github.io' : '',
+  assetPrefix: '/wakeupjin.github.io',
+  basePath: '/wakeupjin.github.io'
 }
 
 module.exports = nextConfig
