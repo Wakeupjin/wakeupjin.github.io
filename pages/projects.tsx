@@ -11,7 +11,7 @@ const ProjectsPage = () => {
   return (
     <Layout 
       title="Projects - 이강진"
-      description="미믹 프랜차이즈와 토스페이먼츠에서 진행한 프로젝트들을 소개합니다."
+      description="미믹의 탄생 배경과 정찬용과 이강진의 이야기를 공유합니다."
     >
       {/* 준비중 모달 */}
       {showModal && (
