@@ -136,10 +136,10 @@ const HomePage = () => {
         <div className="container-custom text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">함께 이야기해요</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            영어교육과 주식투자에 대한 이야기를 나누고 싶다면 <br />언제든 편하게 연락주세요!
+            영어 교육과 주식 투자 또는 서비스 개발 및 성장에 관한  <br />이야기를 나누고 싶다면 언제든 편하게 연락주세요!
           </p>
           <Link href="/contact" className="btn-primary">
-            연락하기
+            먼저 연락해보기
           </Link>
         </div>
       </section>
